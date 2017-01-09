@@ -128,7 +128,7 @@ Features to add:
 
 If you have any questions feel free to ping me on [Twitter](https://twitter.com/jaisonnvieira).
 
-## Licensing
+## LICENSE
 ```
 MIT License
 
