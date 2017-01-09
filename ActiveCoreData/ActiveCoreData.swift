@@ -42,7 +42,7 @@ extension NSManagedObject {
     ///   - attribute: The key parameter to search for. Eg.: "Name"
     ///   - value: The value parameter to search for. Eg.: "John"
     /// - Returns: Returns an array of NSManagedObject (needs to be converted to your type). If no object is found it will return an empty array.
-    public class func findAllByAttribute(_ attribute: String, value: String) -> [NSManagedObject] {
+    public class func findAll(attribute: String, value: String) -> [NSManagedObject] {
         
         if attribute == "" || value == "" {
             
@@ -111,12 +111,12 @@ extension NSManagedObject {
     ///   - attribute: The key parameter to search for. Eg.: "Name"
     ///   - value: The value parameter to search for. Eg.: "John"
     /// - Returns: Returns an object. If no object is found it will return nil.
-    public class func findFirstByAttribute(_ attribute: String, value: String) -> Self? {
+    public class func findFirst(attribute: String, value: String) -> Self? {
         
-        return findFirstByAttributeHelper(attribute, value: value)
+        return findFirstHelper(attribute: attribute, value: value)
     }
     
-    fileprivate class func findFirstByAttributeHelper<T>(_ attribute: String, value: String) -> T? {
+    fileprivate class func findFirstHelper<T>(attribute: String, value: String) -> T? {
         
         if attribute == "" || value == "" {
             
