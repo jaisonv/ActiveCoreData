@@ -1,4 +1,4 @@
- <!-- ![Logo](https://logo.png) -->
+ ![activecoredata](https://cloud.githubusercontent.com/assets/7410639/21783564/11f56238-d69f-11e6-8a0f-01e3b3306cc5.png)
 
  ![Swift](https://img.shields.io/badge/language-Swift-blue.svg)
 
