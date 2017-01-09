@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     // MARK: Find all the persisted objects of type 'Animal' with name attribute 'Rex'
     func findAllByAttributeExample() {
         
-        let animals = Animal.findAllByAttribute("name", value: "Rex") as! [Animal]
+        let animals = Animal.findAll(attribute: "name", value: "Rex") as! [Animal]
         for animal in animals {
             print("Name: \(animal.name)")
             print("Breed: \(animal.breed)")
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
     // MARK: Find the first persisted object of type 'Animal' with name attribute 'Rex'
     func findFirstByAttributeExample() {
      
-        if let animal = Animal.findFirstByAttribute("name", value: "Rex") {
+        if let animal = Animal.findFirst(attribute: "name", value: "Rex") {
             print("Name: \(animal.name)")
             print("Breed: \(animal.breed)")
         }
