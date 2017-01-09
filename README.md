@@ -2,7 +2,7 @@
 
  ![Swift](https://img.shields.io/badge/language-Swift-blue.svg)
 
- Simple and easy way to use Core Data.
+ Simple and easy way to use Core Data. Inspired by Active Record.
 
 ## Some awesome features of ActiveCoreData
 
@@ -123,10 +123,12 @@ There are some stuff that would be nice to add and I will when I have more time.
 
 Features to add:
 - Asynchronous saving
+- Support Cocoapods
 
 ## Questions?
 
 If you have any questions feel free to ping me on [Twitter](https://twitter.com/jaisonnvieira).
+
 
 ## LICENSE
 ```
