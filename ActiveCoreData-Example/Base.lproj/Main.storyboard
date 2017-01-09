@@ -1,25 +1,98 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ActiveCoreData_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcE-M7-HUc">
+                                <rect key="frame" x="164" y="40" width="46" height="30"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfW-e8-z7N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caQ-Fu-UFv">
+                                <rect key="frame" x="162" y="90" width="51" height="30"/>
+                                <state key="normal" title="Find All"/>
+                                <connections>
+                                    <action selector="findAllButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="anj-rP-n6r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wV7-AL-Fy7">
+                                <rect key="frame" x="119" y="140" width="136" height="30"/>
+                                <state key="normal" title="Find All By Attribute"/>
+                                <connections>
+                                    <action selector="FindAllByAttributeButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aW8-Hd-I0G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei7-hU-tzT">
+                                <rect key="frame" x="155" y="190" width="64" height="30"/>
+                                <state key="normal" title="Find First"/>
+                                <connections>
+                                    <action selector="findFirstButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8JM-Pb-1Br"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhS-d5-Klh">
+                                <rect key="frame" x="113" y="240" width="149" height="30"/>
+                                <state key="normal" title="Find First By Attribute"/>
+                                <connections>
+                                    <action selector="findFirstByAttributeButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zrF-QN-Ui9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J44-Rn-e5I">
+                                <rect key="frame" x="113" y="290" width="149" height="30"/>
+                                <state key="normal" title="Find First And Update"/>
+                                <connections>
+                                    <action selector="findFirstAndUpdateButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ryK-jw-8Cj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62o-cu-0dH">
+                                <rect key="frame" x="116" y="340" width="143" height="30"/>
+                                <state key="normal" title="Find First And Delete"/>
+                                <connections>
+                                    <action selector="findFirstAndDeleteButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CMh-qu-36P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rhS-d5-Klh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7oM-go-kDQ"/>
+                            <constraint firstItem="62o-cu-0dH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="966-f2-a6M"/>
+                            <constraint firstItem="BcE-M7-HUc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9UC-mI-XPh"/>
+                            <constraint firstItem="62o-cu-0dH" firstAttribute="top" secondItem="J44-Rn-e5I" secondAttribute="bottom" constant="20" id="Dgb-1s-3BV"/>
+                            <constraint firstItem="Ei7-hU-tzT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G2w-6O-a2r"/>
+                            <constraint firstItem="BcE-M7-HUc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Pp2-Jt-431"/>
+                            <constraint firstItem="caQ-Fu-UFv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QXp-5s-3b6"/>
+                            <constraint firstItem="J44-Rn-e5I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W9t-k8-w6O"/>
+                            <constraint firstItem="Ei7-hU-tzT" firstAttribute="top" secondItem="wV7-AL-Fy7" secondAttribute="bottom" constant="20" id="WpU-Ff-JQU"/>
+                            <constraint firstItem="wV7-AL-Fy7" firstAttribute="top" secondItem="caQ-Fu-UFv" secondAttribute="bottom" constant="20" id="Ze6-pc-3XZ"/>
+                            <constraint firstItem="rhS-d5-Klh" firstAttribute="top" secondItem="Ei7-hU-tzT" secondAttribute="bottom" constant="20" id="kqb-ur-hgF"/>
+                            <constraint firstItem="caQ-Fu-UFv" firstAttribute="top" secondItem="BcE-M7-HUc" secondAttribute="bottom" constant="20" id="qes-PS-OT9"/>
+                            <constraint firstItem="J44-Rn-e5I" firstAttribute="top" secondItem="rhS-d5-Klh" secondAttribute="bottom" constant="20" id="rfi-cb-URs"/>
+                            <constraint firstItem="wV7-AL-Fy7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xgF-RM-bnA"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="345" y="149"/>
         </scene>
     </scenes>
 </document>
